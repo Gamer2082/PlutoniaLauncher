@@ -19,7 +19,7 @@ public class Frame {
         richPresence.startTimestamp = System.currentTimeMillis()/1000;
         richPresence.details = "Joue a Plutonia, le nouveau serveur faction de référence. Réjoin nous :*\"https://discord.gg/gF7NEDCUwS\"* ou sur **Plutonia.fr**";
         richPresence.state = "**Plutonia Launcher**";
-        richPresence.smallImageKey = "photo_de_profil";
+        richPresence.smallImageKey = "logo_nobg";
 
         lib.Discord_UpdatePresence(richPresence);
     }
