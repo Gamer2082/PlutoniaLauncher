@@ -1,4 +1,4 @@
-package fr.plutonia.PlutoniaLauncher;
+package fr.plutonia.PlutoniaLauncher.View;
 
 import club.minnced.discord.rpc.DiscordEventHandlers;
 import club.minnced.discord.rpc.DiscordRPC;
