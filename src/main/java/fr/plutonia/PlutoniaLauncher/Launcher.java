@@ -20,7 +20,7 @@ public class Launcher {
     private static final String VaniaVersion = "1.19.2";
     private static GameInfos gameInfos = new GameInfos("PlutoniaLauncher",new GameVersion(ForgeVersion, GameType.V1_13_HIGHER_FORGE) , new GameTweak[]{GameTweak.FORGE});
     private static Path path = gameInfos.getGameDir();
-    private static File crashFile = new File(String.valueOf(path),".crashReporter");
+    public static File crashFile = new File(String.valueOf(path),".crashes");
     private static CrashReporter crashReporter = new CrashReporter(String.valueOf(crashFile),path);
     private static AuthInfos authInfos;
 
