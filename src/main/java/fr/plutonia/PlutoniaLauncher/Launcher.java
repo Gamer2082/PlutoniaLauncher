@@ -23,12 +23,13 @@ public class Launcher {
     public static File crashFile = new File(String.valueOf(path),".crashes");
     private static CrashReporter crashReporter = new CrashReporter(String.valueOf(crashFile),path);
     private static AuthInfos authInfos;
+    private static String Name;
 
     public static void Auth() throws MicrosoftAuthenticationException {
         MicrosoftAuthenticator authenticator = new MicrosoftAuthenticator();
         MicrosoftAuthResult result = authenticator.loginWithWebview();
         authInfos = new AuthInfos(result.getProfile().getName(),result.getAccessToken(),result.getProfile().getId());
-
+        setName(result.getProfile().getName());
 
     }
     public static void update() throws Exception {
@@ -48,5 +49,13 @@ public class Launcher {
 
     public static CrashReporter getCrashReporter() {
         return crashReporter;
+    }
+
+    public static String getName() {
+        return Name;
+    }
+
+    public static void setName(String name) {
+        Name = name;
     }
 }

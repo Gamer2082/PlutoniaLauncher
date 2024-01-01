@@ -23,7 +23,7 @@ public class Frame extends JFrame {
         this.setTitle("Plutonia MC");
         this.setIconImage(getImage("logo_noBg.png"));
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        this.setSize(1293,800);
+        this.setSize(1065,725);
         this.setContentPane(panel = new Panel());
         this.setUndecorated(true);
         this.setLocationRelativeTo(null);
@@ -43,6 +43,7 @@ public class Frame extends JFrame {
     }
     public static BufferedImage getBufferedImage(String FileName) throws IOException{
         InputStream inputStream = Frame.getInstance().getClass().getClassLoader().getResourceAsStream(FileName);
+        assert inputStream != null;
         return ImageIO.read(inputStream);
     }
 
@@ -60,9 +61,9 @@ public class Frame extends JFrame {
         lib.Discord_Initialize(appId,eventHandlers,true,"");
         DiscordRichPresence richPresence = new DiscordRichPresence();
         richPresence.startTimestamp = System.currentTimeMillis()/1000;
-        richPresence.details = "Joue a Plutonia, le nouveau serveur faction de référence. Réjoin nous :*\"https://discord.gg/gF7NEDCUwS\"* ou sur **Plutonia.fr**";
-        richPresence.state = "**Plutonia Launcher**";
-        richPresence.smallImageKey = "logo_nobg";
+        richPresence.details = "Joue a Plutonia";
+        richPresence.state = "https://discord.gg/gF7NEDCUwS Dev by Gamer_m2082";
+        richPresence.largeImageKey = "logo_nobg";
 
         lib.Discord_UpdatePresence(richPresence);
     }
